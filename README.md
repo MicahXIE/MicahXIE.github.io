@@ -282,3 +282,21 @@ ga_domain: huangxuan.me			# 默认的是 auto, 这里我是自定义了的域名
 
 遵循 MIT 许可证。有关详细,请参阅 [LICENSE](https://github.com/qiubaiying/qiubaiying.github.io/blob/master/LICENSE)。
 
+https://stackoverflow.com/questions/15381198/remove-credentials-from-git
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+
+After Googling for few days, I found this is the only question similar to my situation.
+
+However, I just solved the problem! So I am putting my answer here to help anyone else searching for this issue.
+
+Here is what I did:
+Open "Keychain Access.app" (You can find it in Spotlight or LaunchPad)
+
+Select "All items" in Category
+
+Search "git"
+
+Delete every old & strange item
+
+Try to Push again and it just WORKED
