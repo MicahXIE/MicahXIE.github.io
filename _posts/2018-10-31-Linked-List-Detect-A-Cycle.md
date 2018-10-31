@@ -12,8 +12,6 @@ tags:
 
 ## Topic
 
-Hackerrank Linked Lists: Detect
-
 - [Hackerrank Linked Lists: Detect A Cycle](https://www.hackerrank.com/challenges/ctci-linked-list-cycle/problem)
 
 ## Idea
@@ -22,6 +20,11 @@ Hackerrank Linked Lists: Detect
 >一个指针每次走一步，称为慢指针。如果快慢指针相遇，则说明链表有环，否则无环。
 
 ### C++ Solution
+
+
+//Detect a cycle in a linked list. Note that the head pointer may be 'NULL' 
+//if the list is empty.
+
 
 bool has_cycle(Node* head) {
     // Complete this function
