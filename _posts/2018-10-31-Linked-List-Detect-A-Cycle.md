@@ -16,36 +16,32 @@ tags:
 
 ## Idea
 
->快慢指针的方法，就是让两个指针同时指向链表。在向后遍历的时候，一个指针每次走两步，称为快指针；
->一个指针每次走一步，称为慢指针。如果快慢指针相遇，则说明链表有环，否则无环。
+>C++ solution. Use slow and fast pointer, during the traversal, 
+>slow pointer takes one step and fast takes two steps. 
+>If there is a cycle in the list, the fast pointer will equal to slow pointer. 
+>Otherwise, fast pointer will reach the tail first.
 
 ### C++ Solution
 
+    bool has_cycle(Node* head) {
 
-//Detect a cycle in a linked list. Note that the head pointer may be 'NULL' 
-//if the list is empty.
-
-
-bool has_cycle(Node* head) {
-    // Complete this function
-    // Do not write the main method
-    if(head == NULL || head->next == NULL){
-        return false;
-    }
+        if(head == NULL || head->next == NULL){
+            return false;
+        }
     
-    Node* slow = head;
-    Node* fast = head->next;
+        Node* slow = head;
+        Node* fast = head->next;
     
-    while(slow != fast){
-        if(fast == NULL || fast->next == NULL) return false;
+        while(slow != fast){
+            if(fast == NULL || fast->next == NULL) return false;
         
-        slow = slow->next;
-        fast = fast->next->next;
+            slow = slow->next;
+            fast = fast->next->next;
         
-    }
+        }
     
-    return true;
-}
+        return true;
+    }
 
  
 
