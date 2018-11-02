@@ -8,6 +8,8 @@ header-img: img/post-bg-cook.jpg
 catalog: true
 tags:
     - Algorithm
+    - C++
+    - Linked List
 ---
 
 ## Topic
@@ -21,6 +23,7 @@ tags:
 >slow pointer reverse its next to point to its prev
 >when fast pointer reache the end of the linked list, slow will reach the middle
 >Traverse the first and second half, compare each node value. if all equal, return true, otherwise return false
+>time complexity: O(n), space compexity: O(1)
 
 ### C++ Solution
 
