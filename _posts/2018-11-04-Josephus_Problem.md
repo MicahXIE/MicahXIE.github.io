@@ -28,10 +28,10 @@ circle so that you are the last one remaining and so survive.
 ## Idea
 
 >solution 1
-seq 1: 1, 2, 3, 4, ... , n-2, n-1, n
-seq 2: 1, 2, 3, 4, ... , k-1, k+1, ..., n-2, n-1, n
-seq 3: k+1, k+2, k+3, ..., n-2, n-1, n, 1, 2, 3, .., k-2, k-1
-seq 4: 1, 2, 3, 4, ... , 7, 8, ..., n-2, n-1
+>seq 1: 1, 2, 3, 4, ... , n-2, n-1, n
+>seq 2: 1, 2, 3, 4, ... , k-1, k+1, ..., n-2, n-1, n
+>seq 3: k+1, k+2, k+3, ..., n-2, n-1, n, 1, 2, 3, .., k-2, k-1
+>seq 4: 1, 2, 3, 4, ... , 7, 8, ..., n-2, n-1
 
 > ∵ k = m%n; 　　
 
@@ -101,14 +101,14 @@ STL list common method
     }
 
 
-// Driver Program to test above function 
-int main() 
-{ 
-  int n = 14; 
-  int m = 2; 
-  printf("The chosen place is %d\n", josephus_solution1(n, m)+1);
-  printf("The chosen place is %d\n", josephus_solution2(n, m)+1); 
+    // Driver Program to test above function 
+    int main() 
+    { 
+        int n = 14; 
+        int m = 2; 
+        printf("The chosen place is %d\n", josephus_solution1(n, m)+1);
+        printf("The chosen place is %d\n", josephus_solution2(n, m)+1); 
 
-  return 0; 
-} 
+        return 0; 
+    } 
 
