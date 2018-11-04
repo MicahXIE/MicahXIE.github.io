@@ -28,10 +28,10 @@ circle so that you are the last one remaining and so survive.
 ## Idea
 
 >solution 1
->seq 1 ~ 1, 2, 3, 4, ... , n-2, n-1, n
->seq 2 ~ 1, 2, 3, 4, ... , k-1, k+1, ..., n-2, n-1, n
->seq 3 ~ k+1, k+2, k+3, ..., n-2, n-1, n, 1, 2, 3, .., k-2, k-1
->seq 4 ~ 1, 2, 3, 4, ... , 7, 8, ..., n-2, n-1
+seq 1: 1, 2, 3, 4, ... , n-2, n-1, n
+seq 2: 1, 2, 3, 4, ... , k-1, k+1, ..., n-2, n-1, n
+seq 3: k+1, k+2, k+3, ..., n-2, n-1, n, 1, 2, 3, .., k-2, k-1
+seq 4: 1, 2, 3, 4, ... , 7, 8, ..., n-2, n-1
 
 > ∵ k = m%n; 　　
 
@@ -42,7 +42,7 @@ circle so that you are the last one remaining and so survive.
 > 得到 x' is the value start from 0. final result need to add 1
 
 >solution 2
->STL list common method
+STL list common method
 
 ### C++ Solution
 
