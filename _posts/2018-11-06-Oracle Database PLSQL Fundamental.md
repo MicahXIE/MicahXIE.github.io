@@ -41,9 +41,9 @@ tags:
 
 
 1. **Connection**    
-Connection: Bidirectional network pathway between a user process on a client or mid tier 
+    - Connection: Bidirectional network pathway between a user process on a client or mid tier 
 and an Oracle process on the server.    
-Session: Representation of a specific login by a user.     
+    - Session: Representation of a specific login by a user.     
 <br/>
 2. **Program Global Area**       
     - PGA (Program Global Area) is a memory area that contains:    
