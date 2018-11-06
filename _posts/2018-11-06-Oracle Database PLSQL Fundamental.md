@@ -40,21 +40,20 @@ tags:
 ![Oracle Architecture](https://www.siue.edu/~dbock/cmis565/module1-architecture_files/image004.jpg)
 
 
-- **Connection**    
+1. **Connection**    
 Connection: Bidirectional network pathway between a user process on a client or mid tier 
 and an Oracle process on the server.    
 Session: Representation of a specific login by a user.     
 
-<br/>
-- **Program Global Area**       
+2. **Program Global Area**       
 PGA (Program Global Area) is a memory area that contains:    
-    Session information    
-    Cursor information    
-    SQL execution work areas:        
-        - Sort area    
-        - Hash join area    
-        - Bitmap merge area    
-        - Bitmap create area  
+    - Session information    
+    - Cursor information    
+    - SQL execution work areas:        
+        1. Sort area    
+        2. Hash join area    
+        3. Bitmap merge area    
+        4. Bitmap create area    
 Work area size influences SQL performance    
 Work areas can be automatically or manually managed    
 
