@@ -46,17 +46,16 @@ and an Oracle process on the server.
 Session: Representation of a specific login by a user.     
 <br/>
 2. **Program Global Area**       
-PGA (Program Global Area) is a memory area that contains:    
-    - Session information    
-    - Cursor information    
-    - SQL execution work areas:        
-        1. Sort area    
-        2. Hash join area    
-        3. Bitmap merge area    
-        4. Bitmap create area  
-
-Work area size influences SQL performance    
-Work areas can be automatically or manually managed    
+    - PGA (Program Global Area) is a memory area that contains:    
+        1. Session information    
+        2. Cursor information    
+        3. SQL execution work areas:        
+            - Sort area    
+            - Hash join area    
+            - Bitmap merge area    
+            - Bitmap create area    
+    - Work area size influences SQL performance    
+    - Work areas can be automatically or manually managed    
 
 
 
