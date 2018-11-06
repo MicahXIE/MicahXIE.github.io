@@ -13,27 +13,34 @@ tags:
 
 ## Common Abbreviation
 
-- *SGA*: System Global Area
-- *PGA*: Program Global Area
+- Global
+	
+	**SGA**: System Global Area
+	**PGA**: Program Global Area
 
+- Database Language
+	
+	**DML**: data manipulation language (insert, delete, update, select)
+	**DDL**: data definition language (create, alter, drop, truncate) -- TABLE level
+	**DCL**: data control language (grant, deny, revoke) -- Permission
 
-- *DML*: data manipulation language (insert, delete, update, select)
-- *DDL*: data definition language (create, alter, drop, truncate) -- TABLE level
-- *DCL*: data control language (grant, deny, revoke) -- Permission
+- Database Process
 
+	**DBWn**: Database Block Writer
+	**CKPT**: Checkpoint Process
+    **LGWR**: Log Writer
 
-- *DBWn*: Database Block Writer
-- *CKPT*: Checkpoint Process
-- *LGWR*: Log Writer
+- Communication Protocol
 
-
-- *BGP*: Border Gateway Protocol
+	*BGP*: Border Gateway Protocol
  
 
 ## Structure
 
 
-![Oracle Architecture](https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=541554919,1406016727&fm=26&gp=0.jpg)
+![Oracle Architecture](https://www.siue.edu/~dbock/cmis565/module1-architecture_files/image004.jpg)
+
+
 
 
 
