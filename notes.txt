@@ -1,4 +1,5 @@
 
+
 在简书里测试了一下回答里的那些方法.
 
 1 #+空格 确实无效 ;
@@ -8,3 +9,6 @@
 2 &nbsp; 有效 ;
 
 3 <br/> 有效 ;
+
+
+https://segmentfault.com/markdown
