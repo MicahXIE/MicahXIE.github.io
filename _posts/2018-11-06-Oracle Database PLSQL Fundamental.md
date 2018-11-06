@@ -18,11 +18,17 @@ tags:
 	**SGA**: System Global Area
 	**PGA**: Program Global Area
 
+<br/>
+<br/>
+
 - Database Language
 	
 	**DML**: data manipulation language (insert, delete, update, select)
 	**DDL**: data definition language (create, alter, drop, truncate) -- TABLE level
 	**DCL**: data control language (grant, deny, revoke) -- Permission
+
+<br/>
+<br/>
 
 - Database Process
 
@@ -30,9 +36,11 @@ tags:
 	**CKPT**: Checkpoint Process
     **LGWR**: Log Writer
 
+<br/>
+<br/>
 - Communication Protocol
 
-	*BGP*: Border Gateway Protocol
+	**BGP**: Border Gateway Protocol
  
 
 ## Structure
