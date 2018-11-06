@@ -30,7 +30,9 @@ BGP: Border Gateway Protocol
 
 ## Structure
 
-![](http://f.dataguru.cn/static/image/common/emp.gif)
+![](https://github.com/MicahXIE/MicahXIE.github.io/blob/master/img/oracle_architecture.jpeg)
+
+
 
 
 
