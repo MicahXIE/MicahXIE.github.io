@@ -92,9 +92,9 @@ and an Oracle process on the server.
             - Provide memory for Oracle Streams Processes   
 
 
-## Processing Flow
+## Processing Flow -- Architecture Level
 
-![Processing_A_DML_Statement](https://slideplayer.com/slide/3289692/11/images/2/What+Happens+when+a+SQL+statement+is+issued.jpg)
+![Processing_Flow](https://image.slidesharecdn.com/2afe76c4-ef3f-4e32-b755-fdbffb6ffb34-151117085027-lva1-app6892/95/exploring-oracle-database-performance-tuning-best-practices-for-dbas-and-developers-12-638.jpg?cb=1447750476)
 
 
 **Example and Explaination**:    
@@ -159,9 +159,13 @@ Server process terminates.
 After some period of time `redo log` are archived by `ARCH` process.    
 
 
+## Processing Flow -- Logic Level
+
+![Processing_A_DML_Statement](https://cdn.splessons.com/spf/c81e728d9d4c2f636f067f89cc14862c/wp-content/uploads/2016/03/oracle-database-12c-sql-processing-and-sql-optimizer-splessons.png)
 
 
 
+![Processing_Issue_Statement_Flow](https://slideplayer.com/slide/3289692/11/images/2/What+Happens+when+a+SQL+statement+is+issued.jpg)
 
 
 
