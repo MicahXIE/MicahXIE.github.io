@@ -101,7 +101,7 @@ and an Oracle process on the server.
 
 ORACLE SQL execution flow:
 
-```sqlplus
+```sql
 sqlplus usr/passwd@server
 
 SQL>select * from emp;
@@ -117,7 +117,7 @@ Once we hit sqlplus statement as above `client process`(user) access `sqlnet lis
 Sql net listener confirms that DB is open for buisness and create `server process`. 
 Server process allocates PGA. ‘Connected’ Message returned to user.
 
-```sqlplus
+```sql
 SQL>select * from emp;
 ```
 
@@ -127,7 +127,7 @@ Data is returned to user via PGA and server process.
 
 Now another statement is:       
 
-```sqlplus
+```sql
 SQL>Update emp set salary=30000 where empid=10;
 ```
 
@@ -137,7 +137,7 @@ Data updated in DB cache and mark as `Dirty Buffer`.
 Update employee placed into `redo buffer`. 
 Row updated message returned to user.         
 
-```sqlplus
+```sql
 SQL>commit;
 ```
 
@@ -149,7 +149,7 @@ Control file is updated with new `SCN`.
 Commit complete message return to user. 
 Update emp table in datafile and update header of datafile with latest SCN.    
 
-```sqlplus
+```sql
 SQL>exit;
 ```
 
