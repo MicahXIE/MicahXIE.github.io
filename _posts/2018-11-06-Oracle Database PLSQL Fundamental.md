@@ -29,6 +29,7 @@ tags:
 	**DBWn**: Database Block Writer    
 	**CKPT**: Checkpoint Process     
     **LGWR**: Log Writer    
+    **SCN**: System Change Number    
 
 - Communication Protocol     
 
@@ -147,7 +148,7 @@ commit palced into `redo buffer`.
 `LGWR` writes `redo buffer` contents to `redo log files` and remove from `redo buffer`. 
 Control file is updated with new `SCN`.
 Commit complete message return to user. 
-Update emp table in datafile and update header of datafile with latest SCN.    
+Update emp table in datafile and update header of datafile with latest `SCN`.    
 
 ```sql
 SQL>exit;
