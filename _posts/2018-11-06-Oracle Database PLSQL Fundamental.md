@@ -89,7 +89,74 @@ and an Oracle process on the server.
         Java code and data in the JVM     
         2. Streams pool memory is used exclusively by Oracle Streams to:     
             - Store buffered queue messages     
-            - Provide memory for Oracle Streams Processes    
+            - Provide memory for Oracle Streams Processes   
+
+
+## Processing Flow
+
+![Processing_A_DML_Statement](https://slideplayer.com/slide/3289692/11/images/2/What+Happens+when+a+SQL+statement+is+issued.jpg)    
+
+
+**Example and Explaination**:    
+
+ORACLE SQL execution flow:
+
+```sqlplus
+sqlplus usr/passwd@server
+
+SQL>select * from emp;
+
+SQL>update emp set salary=30000 where empid=10;
+
+SQL>commit;
+```
+
+So we will understand what is happening internaly:        
+
+Once we hit sqlplus statement as above `client process`(user) access `sqlnet listener`. 
+Sql net listener confirms that DB is open for buisness and create `server process`. 
+Server process allocates PGA. ‘Connected’ Message returned to user.
+
+```sqlplus
+SQL>select * from emp;
+```
+
+`Server process` checks the SGA to see if data is already in `buffer cache`. 
+If not then data is retrived from disk and copied into `SGA (DB Cache)`. 
+Data is returned to user via PGA and server process.    
+
+Now another statement is:       
+
+```sqlplus
+SQL>Update emp set salary=30000 where empid=10;
+```
+
+Server process (Via PGA) checks SGA to see if data is already there in `buffer cache`. 
+In our situation chances are the data is still in the `SGA (DB Cache)`.
+Data updated in DB cache and mark as `Dirty Buffer`. 
+Update employee placed into `redo buffer`. 
+Row updated message returned to user.         
+
+```sqlplus
+SQL>commit;
+```
+
+Newest `SCN` obtained from control file. 
+Data in `DB cache` is marked as `Updated and ready for saving`. 
+commit palced into `redo buffer`. 
+`LGWR` writes `redo buffer` contents to `redo log files` and remove from `redo buffer`. 
+Control file is updated with new `SCN`.
+Commit complete message return to user. 
+Update emp table in datafile and update header of datafile with latest SCN.    
+
+```sqlplus
+SQL>exit;
+```
+
+Unsaved changes are rolled back.
+Server process deallocates PGA.
+Server process terminates.
+After some period of time `redo log` are archived by `ARCH` process.      
 
 
 

@@ -12,3 +12,50 @@
 
 
 https://segmentfault.com/markdown
+
+
+ORACLE SQL execution flow:
+
+Sqlplus scott/tiger@prod
+
+SQL>select * from emp;
+
+SQL>update emp set sallary=30000 where empid=10;
+
+SQL>commit;
+
+So we will understand what is happening internaly
+
+Once we hit sqlplus statement as above client process(user) access sqlnet listener.
+Sql net listener confirms that DB is open for buisness & create server process.
+Server process allocates PGA.
+‘Connected’ Message returned to user.
+SQL>select * from emp;
+Server process checks the SGA to see if data is already in buffer cache.
+If not then data is retrived from disk and copied into SGA (DB Cache).
+Data is returned to user via PGA & server process.
+Now another statement is   SQL>Update emp set sallary=30000 where empid=10;
+Server process (Via PGA) checks SGA to see if data is already there in buffer cache.
+In our situation chances are the data is still in the SGA (DB Cache).
+Data updated in DB cache and mark as ‘Dirty Buffer’.
+Update employee placed into redo buffer.
+Row updated message returned to user
+SQL>commit;
+Newest SCN obtained from control file.
+Data in DB cache is marked as ‘Updated and ready for saving’.
+commit palced into redo buffer.
+LGWR writes redo buffer contents to redo log files & remove from redo buffer.
+Control file is updated with new SCN.
+Commit complete message return to user.
+Update emp table in datafile & update header of datafile with latest SCN.
+SQL>exit;
+Unsaved changes are rolled back.
+Server process deallocates PGA.
+Server process terminates.
+After some period of time redo log are archived by ARCH process. 
+
+
+https://slideplayer.com/slide/3289692/11/images/2/What+Happens+when+a+SQL+statement+is+issued.jpg
+
+
+   
