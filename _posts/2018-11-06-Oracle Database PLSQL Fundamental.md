@@ -55,7 +55,42 @@ and an Oracle process on the server.
             - Bitmap merge area    
             - Bitmap create area    
     - Work area size influences SQL performance    
-    - Work areas can be automatically or manually managed    
+    - Work areas can be automatically or manually managed   
+<br/>
+3. **System Global Area**        
+    - Database Buffer Cache    
+        1. Holds copies of data blocks that are read from data files    
+        2. Is shared by all concurrent processes    
+    - Redo Log Buffer    
+        1. Is a circular buffer in the SGA (based on the number of CPUs)     
+        2. Contains redo entries that have the info to redo 
+        changes made by operations, such as DML and DDL     
+    - Shared Pool     
+        1. Library Cache    
+            - Shared parts of SQL and PL/SQL statements     
+        2. Data dictionary Cache    
+        3. Result Cache     
+            - SQL queries    
+            - PL/SQL functions    
+        4. Control structures    
+            - Locks    
+    - Large Pool     
+        1. Provides large memory allocations for:     
+            - Sessions memory for the shared server and Oracle XA interface    
+            - Parallel execution buffers    
+            - I/O server processes     
+            - Oracle Database backup and restore operations     
+        2. Optional pool better suited when using the following:    
+            - Parallel execution     
+            - Recovery Manager     
+            - Shared server     
+    - Java Pool and Streams Pool            
+        1. Java pool memory is used in server memory for all session-specific 
+        Java code and data in the JVM     
+        2. Streams pool memory is used exclusively by Oracle Streams to:     
+            - Store buffered queue messages     
+            - Provide memory for Oracle Streams Processes    
+
 
 
 
