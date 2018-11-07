@@ -94,7 +94,7 @@ and an Oracle process on the server.
 
 ## Processing Flow
 
-![Processing_A_DML_Statement](https://slideplayer.com/slide/3289692/11/images/2/What+Happens+when+a+SQL+statement+is+issued.jpg)    
+![Processing_A_DML_Statement](https://slideplayer.com/slide/3289692/11/images/2/What+Happens+when+a+SQL+statement+is+issued.jpg)
 
 
 **Example and Explaination**:    
@@ -156,7 +156,9 @@ SQL>exit;
 Unsaved changes are rolled back.
 Server process deallocates PGA.
 Server process terminates.
-After some period of time `redo log` are archived by `ARCH` process.      
+After some period of time `redo log` are archived by `ARCH` process.    
+
+
 
 
 
