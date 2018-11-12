@@ -12,7 +12,7 @@ tags:
 
 ## Topic
 
-- [Hackerrank Linked Lists: Inserting A Node Into Douly Linked List](https://www.hackerrank.com/challenges/insert-a-node-at-a-specific-position-in-a-linked-list/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=linked-lists)
+- [Hackerrank Linked Lists: Inserting A Node Into Doubly Linked List](https://www.hackerrank.com/challenges/insert-a-node-into-a-sorted-doubly-linked-list/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=linked-lists)
 
 ## Idea
 
