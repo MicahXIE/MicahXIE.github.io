@@ -12,7 +12,7 @@ tags:
 
 ## Topic
 
-- [Hackerrank Linked Lists: Inserting A Node Into Doubly Linked List](https://www.hackerrank.com/challenges/insert-a-node-into-a-sorted-doubly-linked-list/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=linked-lists)
+- [HourRank 31: Save The Queen](https://www.hackerrank.com/contests/hourrank-31/challenges/save-the-queen)
 
 ## Idea
 
