@@ -41,15 +41,15 @@ tags:
     ret=0    
 
     # check the number of input parameter
-    if [ $# -ne 1 ]; then
-        print "$USAGE"
-        ret=1
+    if [ $# -ne 1 ]; then       
+        print "$USAGE"       
+        ret=1      
 
-    else
-        ## check if file or folder exists
-        if [ ! -f "$file" ] && [ ! -d "$file" ]; then
-            echo "$file does not exist."
-            ret=1
+    else       
+        # check if file or folder exists         
+        if [ ! -f "$file" ] && [ ! -d "$file" ]; then      
+            echo "$file does not exist."        
+            ret=1       
 
         else     
             echo "rm the target $file"      
