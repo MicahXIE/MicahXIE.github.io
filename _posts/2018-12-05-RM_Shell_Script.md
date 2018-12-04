@@ -35,10 +35,10 @@ tags:
     file="$1"
 
     # How to use
-    USAGE = "\nUsage: <$0> 'target_file' \n\
-    'target_file' - use the file or folder full path
-    "
-    ret=0
+    USAGE = "\nUsage: <$0> 'target_file' \n\     
+    'target_file' - use the file or folder full path     
+    "    
+    ret=0    
 
     # check the number of input parameter
     if [ $# -ne 1 ]; then
@@ -51,13 +51,12 @@ tags:
             echo "$file does not exist."
             ret=1
 
-        else
-            echo "rm the target $file"
-            rm -rf $file>/dev/null
-            ret=$?
-        fi
-    fi
+        else     
+            echo "rm the target $file"      
+            rm -rf $file>/dev/null      
+            ret=$?       
+        fi       
+    fi       
+ 
+    exit $ret     
 
-    exit $ret
-
-    
