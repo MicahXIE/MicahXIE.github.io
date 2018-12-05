@@ -19,7 +19,7 @@ tags:
 > input a full path, rm the specific file or folder
 
 ### Program
-
+```
     #!/bin/ksh
 
     # PURPOSE
@@ -49,7 +49,7 @@ tags:
     else       
         # check if file or folder exists         
         if [ ! -f "$file" ] && [ ! -d "$file" ]; then 
-             
+
             echo "$file does not exist."        
             ret=1       
 
@@ -63,4 +63,4 @@ tags:
     fi       
  
     exit $ret     
-
+```
