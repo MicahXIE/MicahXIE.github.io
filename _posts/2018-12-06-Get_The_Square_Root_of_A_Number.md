@@ -19,7 +19,7 @@ tags:
 
 > `x^2 = a` can change to `x^2-a = 0` question. The question to get the square root of the number `a` can 
 > convert to the question that to find a number `x` to make `x^2-a=0` (or very small number like 0.000001).
-> Below method is to use Binary Search and keep narrowing the scope to find the `mid value` to fulfill equation
+> Below method is to use Binary Search and keep narrowing the scope to find the `mid value` to fulfill equation.
 > The `mid value` is the square root of number `a`.
 
 ### C++ Solution
