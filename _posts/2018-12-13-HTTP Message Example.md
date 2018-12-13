@@ -19,11 +19,11 @@ this protocol.
 
 In general an HTTP-based Uniform Resource Locator(URL) has below format:
 
->protocol://[host.]domain[:port][/context][/resource][?query string|path variable]
+>protocol://[host.]domain[:port][/context][/resource][?query string path variable]
 
 or
 
->protocol://IP address[:port][/context][/resource][?query string|path variable]
+>protocol://IP address[:port][/context][/resource][?query string path variable]
    
  
 ## HTTP Request
@@ -33,7 +33,8 @@ The HTTP request consists of three components:
 - Request headers
 - Entity body
 
-example:
+
+HTTP Request Example:
 
     POST /examples/default.jsp HTTP/1.1
     Accept: text/plain; text/html
@@ -48,6 +49,8 @@ example:
     (CRLF)
     lastName=Blank&firstName=Mike
 
+<br/>
+<br/>
 
 > POST /examples/default.jsp HTTP/1.1
 
