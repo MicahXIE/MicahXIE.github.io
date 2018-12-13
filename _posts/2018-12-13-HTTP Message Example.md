@@ -19,11 +19,11 @@ this protocol.
 
 In general an HTTP-based Uniform Resource Locator(URL) has below format:
 
->protocol://[host.]domain[:port][/context][/resource][?query string | path variable]
+>protocol://[host.]domain[:port][/context][/resource][?query string|path variable]
 
 or
 
->protocol://IP address[:port][/context][/resource][?query string | path variable]
+>protocol://IP address[:port][/context][/resource][?query string|path variable]
    
  
 ## HTTP Request
