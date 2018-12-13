@@ -12,8 +12,8 @@ tags:
 
 ## Background
 
-The HTTP protocol enables web servers and browsers to exchange data over the 
-Internet or an intranet. The World Wide Web Consortium (W3C), and international
+The `HTTP protocol` enables web servers and browsers to exchange data over the 
+Internet or an intranet. The `World Wide Web Consortium (W3C)`, and international
 community that develops standards, is responsible for revising and maintaining
 this protocol.
 
@@ -56,7 +56,7 @@ The HTTP request consists of three components:
 The method-URI-protocol version appears as the first line of the request. 
 Here the POST is the request method, an HTTP request can use one the many
 request methods specified in the HTTP standards. HTTP 1.1 supports seven
-request types: GET, POST, HEAD, OPTIONS, PUT, DELETE, and TRACE. GET and 
+request types: `GET`, `POST`, `HEAD`, `OPTIONS`, `PUT`, `DELETE` and `TRACE`. GET and 
 POST are the most commonly used in Internet applications.
 
 
@@ -67,7 +67,7 @@ entity body, and so on. `Each header and entity body is separated by a
 carriage return/linefeed (CRLF) sequence`
 
 
-Below is the entity body for example HTTP request:
+Below is the `entity body` for example HTTP request:
 
 > lastName=Blank&firstName=Mike
 
@@ -103,14 +103,14 @@ Similar to the HTTP request, the HTTP response also consists of three parts:
 
 The first line of the response header is similar to the first line of the request header.
 It tells you that the protocol used is HTTP version 1.1 and that the request succeeded. 
-Status code 200 is only issued if the web server was able to find the resource requested.
+Status code `200` is only issued if the web server was able to find the resource requested.
 If a resource cannot be found or the request cannot be understood, the server sends a different
-status code. For instance 401 is the status code for an unauthorized access and 405 indicates
+status code. For instance `401` is the status code for an unauthorized access and `405` indicates
 the http method is not allowed.
 
 
 The entity body of the response is the HTML content of the response iteself. The headers and the
-entity body are separated by a sequence of CRLFs.
+entity body are separated by a sequence of `CRLFs`.
 
 
 
