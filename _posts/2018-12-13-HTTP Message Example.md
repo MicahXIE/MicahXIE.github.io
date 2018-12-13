@@ -34,7 +34,7 @@ The HTTP request consists of three components:
 - Entity body
 
 
-HTTP Request Example:
+`HTTP Request Example:`
 
     POST /examples/default.jsp HTTP/1.1
     Accept: text/plain; text/html
@@ -49,7 +49,6 @@ HTTP Request Example:
     (CRLF)
     lastName=Blank&firstName=Mike
 
-<br/>
 <br/>
 
 > POST /examples/default.jsp HTTP/1.1
@@ -76,40 +75,43 @@ Below is the entity body for example HTTP request:
 
 ### HTTP Response
 
-    #include<iostream>
-    #include<math.h>
-    using namespace std;
+Similar to the HTTP request, the HTTP response also consists of three parts:
+- Protocol, Status Code, Description
+- Response headers
+- Entity body
 
-    double calculate_Square_Root(int n)
-    {
-        double mid =(double (n))/ 2;
-        double l = 0.0, r = 1.0;
-        while (fabs((mid*mid - (double)n)) > 0.000001)
-        {
 
-            if ((mid*mid - (double)n) > 0.000001)
-            {
-                r = mid;
-                mid = l + (r - l) /2;
-            }
+`HTTP Response Example:`
 
-            else
-            {
+    HTTP/1.1 200 OK
+    Server: Apache-Coyote/1.1
+    Date: Thu, 29 Sep 2013 13:13:33 GMT
+    Content-Type: text/html
+    Last-Modified: Wed, 28 Sep 2013 13:13:12 GMT
+    Content-Length: 112
+    (CRLF)
+    <html>
+    <head>
+    <title>HTTP Response Example</title>
+    </head>
+    <body>
+    Welcome to Brainy Software
+    </body>
+    </html>
 
-                l = mid;
-                mid = l + (r - l) / 2;
-            }
 
-        }
-        return mid;
 
-    }
+The first line of the response header is similar to the first line of the request header.
+It tells you that the protocol used is HTTP version 1.1 and that the request succeeded. 
+Status code 200 is only issued if the web server was able to find the resource requested.
+If a resource cannot be found or the request cannot be understood, the server sends a different
+status code. For instance 401 is the status code for an unauthorized access and 405 indicates
+the http method is not allowed.
 
-    int main(){
-    
-        double res = calculate_Square_Root(7);
-        cout << "result: " << res << endl;
-    }
+
+The entity body of the response is the HTML content of the response iteself. The headers and the
+entity body are separated by a sequence of CRLFs.
+
 
 
 
