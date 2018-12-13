@@ -28,10 +28,48 @@ or
  
 ## HTTP Request
 
-> `x^2 = a` can change to `x^2-a = 0` question. The question to get the square root of the number `a` can 
-> convert to the question that to find a number `x` to make `x^2-a=0` (or very small number like 0.000001).
-> Below method is to use Binary Search and keep narrowing the scope to find the `mid value` to fulfill equation.
-> The `mid value` is the square root of number `a`.
+The HTTP request consists of three components:
+- Method, Uniform Resource Identifiers(URI), Protocol/Version
+- Request headers
+- Entity body
+
+example:
+
+    POST /examples/default.jsp HTTP/1.1
+    Accept: text/plain; text/html
+    Accept-Language: en-gb
+    Connection: Keep-Alive
+    Host: localhost
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5; en-US;
+    rv:1.9.2.6) Gecko/20100625 Firefox/3.6.6
+    Content-Length: 30
+    Content-Type: application/x-www-form-urlencoded
+    Accept-Encoding: gzip, deflate
+    (CRLF)
+    lastName=Blank&firstName=Mike
+
+
+> POST /examples/default.jsp HTTP/1.1
+
+The method-URI-protocol version appears as the first line of the request. 
+Here the POST is the request method, an HTTP request can use one the many
+request methods specified in the HTTP standards. HTTP 1.1 supports seven
+request types: GET, POST, HEAD, OPTIONS, PUT, DELETE, and TRACE. GET and 
+POST are the most commonly used in Internet applications.
+
+
+In an HTTP request, the request header contains useful information about 
+the client environment and the entity body for the request. For instance, 
+it may contain the language the browser is set for, the length of the 
+entity body, and so on. `Each header and entity body is separated by a 
+carriage return/linefeed (CRLF) sequence`
+
+
+Below is the entity body for example HTTP request:
+
+> lastName=Blank&firstName=Mike
+
+
 
 ### HTTP Response
 
