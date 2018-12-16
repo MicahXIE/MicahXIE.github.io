@@ -28,7 +28,7 @@ I hit when I install the libraries.
 
 to be updated
 
-[Test](img/opencv_example.jpg)
+![example](https://github.com/MicahXIE/MicahXIE.github.io/blob/master/img/opencv_example.jpg)
 
 
 
