@@ -28,7 +28,7 @@ I hit when I install the libraries.
 
 to be updated
 
-![](img/opencv_example.jpg)
+[Test](img/opencv_example.jpg)
 
 
 
