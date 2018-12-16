@@ -26,9 +26,62 @@ I hit when I install the libraries.
  
 ## Issues & Solutions
 
-to be updated
+- 'array' file not found in cvdef.h
 
-![example](https://github.com/MicahXIE/MicahXIE.github.io/blob/master/img/post-bg-debug.png)
+The issue is because `array` is provided in C++11, you need to provide the -std=c++11 flag to enable it, and provide the `-stdlib=libc++` flag for the corresponding library. But in the article one, we need to choose `libstdc++`. So there is a conflict here, that's why finally I choose to use the command
+Line Method in article 2.
+
+- macports for gcc upgrade
+
+my previous gcc version is 4.2 and I use macports to upgrade it to 4.7 to make sure it to support 
+C++11. You can refer to below article to upgrade your gcc in mac.
+
+[Installing GCC on Mac](https://www.ficksworkshop.com/blog/installing-gcc-on-mac)
+
+
+- pkg-config --cflags --libs opencv not found
+
+As mentioned in article 2, if `pkg-config --cflags --libs opencv` doesn't work, you should specify the location of your opencv.pc path. Also you need to add it to your ~/.bash_profile and apply it.
+
+> pk_package path as below
+> export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib:/usr/local/Cellar/opencv/3.4.3_1/lib/pkgconfig/
+
+- glog Library not loaded
+
+After you build your program, when you run your program, it maybe report below error:
+
+> dyld: Library not loaded: /usr/local/opt/glog/lib/libglog.0.3.5.dylib
+> Referenced from: /usr/local/opt/opencv/lib/libopencv_sfm.3.4.dylib
+> Reason: image not found
+> Abort trap: 6
+
+This issue is because you need to install glog separately.
+
+> brew install glog
+
+
+## Testing Program
+
+
+	#include <iostream>
+	#include <opencv2/opencv.hpp>
+	#include <opencv2/highgui.hpp>
+	using namespace std;
+	using namespace cv;
+
+	int main(int argc, const char * argv[]) {
+    	Mat image;
+    	//change to your own path
+    	image = imread("/Users/micah/Downloads/1.jpg", 1);
+    	namedWindow("Display Image", WINDOW_AUTOSIZE);
+    	imshow("Display Image", image);
+    	waitKey(0);
+    	return 0;
+	}
+
+
+
+
 
 
 
