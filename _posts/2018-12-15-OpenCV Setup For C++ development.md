@@ -33,35 +33,32 @@ I hit when I install the libraries.
 
 - macports for gcc upgrade
 
-  my previous gcc version is 4.2 and I use macports to upgrade it to 4.7 to make sure it to support 
-  C++11. You can refer to below article to upgrade your gcc in mac.
-
+  my previous gcc version is 4.2 and I use macports to upgrade it to 4.7 to make sure it to support     
+  `C++11`. You can refer to below article to upgrade your gcc in mac.     
+<br/>
   [Installing GCC on Mac](https://www.ficksworkshop.com/blog/installing-gcc-on-mac)
 <br/>
 
 - pkg-config --cflags --libs opencv not found
 
-  As mentioned in article 2, if `pkg-config --cflags --libs opencv` doesn't work, you should specify the location of your opencv.pc path. Also you need to add it to your ~/.bash_profile and apply it.
+  As mentioned in article 2, if `pkg-config --cflags --libs opencv` doesn't work, you should specify the location of your opencv.pc path. Also you need to add it to your `~/.bash_profile` and apply it.
 
-```shell
-#pk_package path as below
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib:/usr/local/Cellar/opencv/3.4.3_1/lib/pkgconfig/
-```
+  > #pk_package path as below        
+  > export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib:/usr/local/Cellar/opencv/3.4.3_1/lib/pkgconfig/
 
 - glog Library not loaded
 
   After you build your program, when you run your program, it maybe report below error:
 
-```C++
-	dyld: Library not loaded: /usr/local/opt/glog/lib/libglog.0.3.5.dylib
-	Referenced from: /usr/local/opt/opencv/lib/libopencv_sfm.3.4.dylib
-	Reason: image not found
-	Abort trap: 6
-```
+  > dyld: Library not loaded: /usr/local/opt/glog/lib/libglog.0.3.5.dylib     
+  > Referenced from: /usr/local/opt/opencv/lib/libopencv_sfm.3.4.dylib     
+  > Reason: image not found       
+  > Abort trap: 6        
 
-  This issue is because you need to install glog separately.
+  This issue is because you need to install `glog` separately.       
 
-> brew install glog
+  > brew install glog    
+
 <br/>
 
 ## Testing Program
