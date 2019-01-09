@@ -12,7 +12,14 @@ tags:
 
 ## Background
 
+Clean code is definitely a great book to improve the state of the art of software craftsmanship. 
+In this series, I will summerize some key points and for details please refer to the book 
+`Clean Code Robert C. Martin Series`
 
+
+## Rules & Examples
+
+To be updated soon...
 
 
 
