@@ -23,11 +23,11 @@ Names are everywhere in software. We name our variables, our functions, our argu
 
 
 
-- Use Intention-Revealing Names
+**Use Intention-Revealing Names**
 
-   It is easy to say that names should `reveal intent`. What we want to impress upon you is that we are serious about this. Choosing good names takes time but saves more than it takes. Choosing names that reveal intent can make it much easier to understand and change code. 
+It is easy to say that names should `reveal intent`. What we want to impress upon you is that we are serious about this. Choosing good names takes time but `saves more` than it takes. Choosing names that reveal intent can make it `much easier` to understand and change code. 
 
-   What is the purpose of this code?
+What is the purpose of this code?
 
 ```Java
 	public List<int[]> getThem() {
@@ -39,7 +39,7 @@ Names are everywhere in software. We name our variables, our functions, our argu
 	}
 ```
 
-   Say that we’re working in a mine sweeper game. We find that the board is a list of cells called theList. Let’s rename that to gameBoard. we can improve the code considerably:
+Say that we’re working in a mine sweeper game. We find that the board is a list of `cells` called `theList`. Let’s rename that to `gameBoard`. we can improve the code considerably:
 
 ```Java
 	public List<int[]> getFlaggedCells() {
@@ -51,7 +51,7 @@ Names are everywhere in software. We name our variables, our functions, our argu
 	}
 ```
 
-   We can go further and write a simple class for cells instead of using an array of ints. It can include an intention-revealing function (call it isFlagged) to hide the magic num- bers. It results in a new version of the function:
+We can go further and write a simple `class for cells` instead of using `an array of ints`. It can include an intention-revealing function (call it isFlagged) to hide the magic numbers. It results in a new version of the function:
 
 ```Java
 	public List<Cell> getFlaggedCells() {
