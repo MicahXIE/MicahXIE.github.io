@@ -18,11 +18,11 @@ Protobuf these libraries.
 
 
 ## System Environment
-* Host CentOS 7 
+* `Host` CentOS 7 
 * x86_x64
 * gcc 6.3.0
 
-* Target Hi3559AV100
+* `Target` Hi3559AV100
 * ARM 64 (aarch64)
 * gcc 6.3.0
 
@@ -53,13 +53,13 @@ using gcc : arm : aarch64-himix100-linux-gcc ;
 * sudo yum install autoconf automake libtool
 * ./autogen.sh
 
-generate protoc
+#### generate protoc
 * ./configure
 * make
 * sudo make install
 * make disclean
 
-cross compilation
+#### cross compilation
 * set configure as below
 ```
 ./configure --build=i686-pc-linux \
