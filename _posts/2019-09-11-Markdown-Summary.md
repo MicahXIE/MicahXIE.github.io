@@ -36,6 +36,7 @@ Markdown is used very frequently in documentation and README. It is very neccess
 **Bold**
 ***Italic Bold***
 ~~Strikethrough~~
+`Highlight`
 ```
 
 ### Reference
