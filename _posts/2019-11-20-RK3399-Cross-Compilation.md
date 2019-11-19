@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      Hi3559AV100 Cross Compilation
+title:      RK3399 Cross Compilation
 subtitle:   Misc series
-date:       2019-11-19
+date:       2019-11-20
 author:     Micah
 header-img: img/post-bg-universe.jpg
 catalog: true
@@ -12,37 +12,41 @@ tags:
 
 ## Background
 
-Sorry for not updating for such a long time. From today, I will try to write blog every week to summarize something I learn in the week.
-Today will introduce something related to Huawei Hi3559AV100 cross compilation. In this article, I will mainly focus on OpenCV, Boost and 
-Protobuf these libraries.
+This article will introduce something related to rockchip `rk3399` cross compilation. Later I will add some testing examples.
 
 
 ## System Environment
-* `Host` CentOS 7 
+* `Host` Ubuntu 16.04 
 * x86_x64
-* gcc 6.3.0
+* gcc 5.4.0
 
-* `Target` Hi3559AV100
+* `Target` rk3399
 * ARM 64 (aarch64)
-* gcc 6.3.0
+* gcc 6.3.1
 
 * Toolchain 
-* aarch64-himix100-linux-gcc 
-* aarch64-himix100-linux-g++
+* aarch64-linux-gnu-gcc 
+* aarch64-linux-gnu-g++
 
 
 ## Steps
 
-### Setup the cross compilation tools
-* source ./aarch64-himix100-linux.install (root permission)
+### Download the cross compilation tools
+* goto https://releases.linaro.org/components/toolchain/binaries/6.3-2017.05/aarch64-linux-gnu/
+* download `gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu.tar.xz`
+* cp `gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu.tar.xz` /opt (root)
+* cd /opt
+* tar -zxvf gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu.tar.xz
+* mv gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu gcc-aarch64-linux-gnu
 * edit `~/.bashrc` (user)
 
 ```
-export PATH=$PATH:/opt/hisi-linux/x86-arm/aarch64-himix100-linux/bin
+export PATH=$PATH:/opt/gcc-aarch64-linux-gnu/bin
 ```
 
 * source `~/.bashrc`
-* check setup, `aarch64-himix100-linux-gcc -v`
+* check setup, `aarch64-linux-gnu-gcc -v`
+
 
 
 ### Boost 1.66.0
@@ -51,9 +55,11 @@ export PATH=$PATH:/opt/hisi-linux/x86-arm/aarch64-himix100-linux/bin
 * cd boost_1_66_0
 * ./bootstrap.sh --prefix=$PWD/../boost-1-66-0
 * Moidfy project-config.jam to
+
 ```
-using gcc : arm : aarch64-himix100-linux-gcc ;
+using gcc : arm : aarch64-linux-gnu-gcc ;
 ```
+
 * ./bjam
 * ./bjam install
 
@@ -72,14 +78,16 @@ using gcc : arm : aarch64-himix100-linux-gcc ;
 
 ***cross compilation***
 * set configure as below
+
 ```
 ./configure --build=i686-pc-linux \
-            --host=aarch64-himix100-linux \
+            --host=aarch64-linux-gnu \
             --with-protoc=protoc \
-            CC=aarch64-himix100-linux-gcc \
-            CXX=aarch64-himix100-linux-g++ \
+            CC=aarch64-linux-gnu-gcc \
+            CXX=aarch64-linux-gnu-g++ \
             --prefix=$PWD/install
 ```
+
 * make -j8
 * make install
 
@@ -88,9 +96,10 @@ using gcc : arm : aarch64-himix100-linux-gcc ;
 * tar -zxvf 3.4.4.tar.gz
 * cd opencv-3.4.4
 * run configure as below:
+
 ```
-cmake -D CMAKE_C_COMPILER=aarch64-himix100-linux-gcc \
-      -D CMAKE_CXX_COMPILER=aarch64-himix100-linux-g++ \
+cmake -D CMAKE_C_COMPILER=aarch64-linux-gnu-gcc \
+      -D CMAKE_CXX_COMPILER=aarch64-linux-gnu-g++ \
       -D BUILD_SHARED_LIBS=ON \
       -D BUILD_ZLIB=ON \
       -D CMAKE_CXX_FLAGS=-fPIC \
@@ -111,5 +120,6 @@ cmake -D CMAKE_C_COMPILER=aarch64-himix100-linux-gcc \
       -D WITH_ZLIB_INCLUDE_DIRS=/home/iim/Documents/libs/opencv-3.4.4/3rdparty/zlib \
       ..
 ```
+
 * make -j8
 * make install
