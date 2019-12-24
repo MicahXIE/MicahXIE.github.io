@@ -67,4 +67,4 @@ run: unicorn: (pid 1149) 885s; run: log: (pid 1134) 885s
 * result as below: 
 
 
-![gitlab login page](https://github.com/MicahXIE/MicahXIE.github.io/tree/master/img/gitlab_login.png)
+![gitlab login page](https://github.com/MicahXIE/MicahXIE.github.io/blob/master/img/gitlab_login.png)
