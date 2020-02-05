@@ -33,7 +33,7 @@ This article mainly summarize the Java JVM garbage collection flow based on HotS
 
 
 ### Hotspot JVM Architecture
-![HotSpot JVM Architecture](https://images.app.goo.gl/7pGdJv4yHUE4eCu49)
+![HotSpot JVM Architecture](https://img.javatt.com/bf/bf82cfc64dac4b7fddfab3d438e5054d.png)
 
 
 
