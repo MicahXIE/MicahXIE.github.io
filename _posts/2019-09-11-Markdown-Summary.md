@@ -81,4 +81,20 @@ Example:
 ```
 
 
+### Unordered List
+can use any type of `-` `+` `*` , need to add space after it. the effect is same.  
+
+```
+- list content
++ list content
+* list content
+```
+
+number with dot, need to add space after the dot.
+
+```
+1. first line
+2. second line
+3. third line
+```
 
