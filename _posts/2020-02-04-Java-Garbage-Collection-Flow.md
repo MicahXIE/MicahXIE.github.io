@@ -36,6 +36,15 @@ This article mainly summarize the Java JVM garbage collection flow based on HotS
 ![HotSpot JVM Architecture](https://img.javatt.com/bf/bf82cfc64dac4b7fddfab3d438e5054d.png)
 
 
+- When Java program executes, the JVM process will run. When Java program stops, the JVM process will end.
+- Each Java program will start `one` JVM process.
+- Class Loader Subsystem will provide 3 types of class loaders.
+  1. `BootStrap ClassLoader`: load JDK core libs like rt.jar, resources.jar、charsets.jar etc.
+  2. `Extension ClassLoader`: load JAVA_HOME jre/lib/ jar libs or -Djava.ext.dirs libs
+  3. `App ClassLoader`: load application CLASSPATH jar and class files.
+- `Method Area` stores class info, class static variable and constant pool. In Java program, all the threads share one `Method Area` so it must be thread-safe. 
+
+
 
 
 
