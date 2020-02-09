@@ -42,7 +42,10 @@ This article mainly summarize the Java JVM garbage collection flow based on HotS
   1. `BootStrap ClassLoader`: load JDK core libs like rt.jar, resources.jar、charsets.jar etc.
   2. `Extension ClassLoader`: load JAVA_HOME jre/lib/ jar libs or -Djava.ext.dirs libs
   3. `App ClassLoader`: load application CLASSPATH jar and class files.
-- `Method Area` stores class info, class static variable and constant pool. In Java program, all the threads share one `Method Area` so it must be thread-safe. 
+- `Method Area` stores class info, class static variable and constant pool. In Java program, all the threads share one `Method Area` so it must be thread-safe.
+- `JVM Heap` : When Java program create or new an object instance, it will allocate memory in the heap. JVM only have one `JVM Heap` and all the threads will share this heap. We can dynamically set the memory size for JVM heap when run the java program.
+- `Java Threads` （Java Stack): only store basic Java data type and object reference (not instance). The data will be released automatically once they go out of the scope. Every thread has it own stack and the stack is private. Every stack includes serveral stack frames. Each frame includes local variables area, operand stack area and runtime environment area.
+- `Native Internal threads`: is similar to Java stack. `Native Internal Stack` is used when JVM calls native method. These methods are not written by Java(like C, C++ etc) and not managed by JVM.
 
 
 
